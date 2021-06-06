@@ -29,6 +29,7 @@ const Nav = styled.nav`
 const NavLink = styled(Link)`
   padding: 1rem;
   display: block;
+  background-color: red;
 `;
 
 export default function Navbar(props) {
