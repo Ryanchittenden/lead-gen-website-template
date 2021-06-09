@@ -1,6 +1,6 @@
 import React from "react";
 import { css } from "@emotion/react";
-export default function Home_Hero(props) {
+export default function HomeHero(props) {
   return (
     <section>
       <div>

@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { Link } from "gatsby";
-import { breakpoints } from "../helpers";
+import { breakpoints } from "./helpers";
 import { RiMenu4Line } from "react-icons/ri";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Nav = styled.nav`
   display: flex;
@@ -29,7 +30,23 @@ const Nav = styled.nav`
 const NavLink = styled(Link)`
   padding: 1rem;
   display: block;
-  background-color: red;
+`;
+
+const menuIcon = css`
+  width: 30px;
+  height: 30px;
+  ${breakpoints.md} {
+    display: none;
+  }
+`;
+
+const logoMenuWrapper = css`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  ${breakpoints.md} {
+    margin-right: auto;
+  } ;
 `;
 
 export default function Navbar(props) {
@@ -49,31 +66,21 @@ export default function Navbar(props) {
           }
         `}
       >
-        <div
-          css={css`
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            ${breakpoints.md} {
-              margin-right: auto;
-            } ;
-          `}
-        >
+        <div css={logoMenuWrapper}>
           <span
             css={css`
               margin-right: auto;
             `}
           >
-            ♥
+            <StaticImage
+              src="../images/icon.png"
+              alt="Icon"
+              width={200}
+              height={200}
+            />
           </span>
           <RiMenu4Line
-            css={css`
-              width: 30px;
-              height: 30px;
-              ${breakpoints.md} {
-                display: none;
-              }
-            `}
+            css={menuIcon}
             onClick={() => isVisibleChanger(!isVisible)}
           />
         </div>
