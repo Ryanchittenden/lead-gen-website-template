@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { Link } from "gatsby";
-import { breakpoints } from "./helpers";
+import { breakpoints, centre_content, fontMarginReset } from "./helpers";
 import { RiMenu4Line } from "react-icons/ri";
-import { StaticImage } from "gatsby-plugin-image";
 
 const Nav = styled.nav`
   display: flex;
@@ -14,7 +13,6 @@ const Nav = styled.nav`
   overflow: hidden;
   transition: 200ms max-height ease-in, 200ms visibility ease-in,
     opacity 200ms ease-in;
-
   ${(props) =>
     props.isVisible
       ? "max-height: 25vh; visibility: visible; opacity: 1"
@@ -72,12 +70,7 @@ export default function Navbar(props) {
               margin-right: auto;
             `}
           >
-            <StaticImage
-              src="../images/icon.png"
-              alt="Icon"
-              width={200}
-              height={200}
-            />
+            ♥
           </span>
           <RiMenu4Line
             css={menuIcon}

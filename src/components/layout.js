@@ -80,7 +80,7 @@ export default function Layout({ children }) {
     <React.Fragment>
       <Global styles={globalStyles} />
       <Navbar />
-      <main onMouse>{children}</main>
+      <main>{children}</main>
     </React.Fragment>
   );
 }
