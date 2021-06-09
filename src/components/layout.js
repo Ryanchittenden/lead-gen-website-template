@@ -2,6 +2,7 @@ import React from "react";
 import { css, Global } from "@emotion/react";
 import "normalize.css";
 import "../css/variables.css";
+import Navbar from "./navbar";
 
 const globalStyles = css`
   * {
@@ -78,6 +79,7 @@ export default function Layout({ children }) {
   return (
     <React.Fragment>
       <Global styles={globalStyles} />
+      <Navbar />
       <main onMouse>{children}</main>
     </React.Fragment>
   );

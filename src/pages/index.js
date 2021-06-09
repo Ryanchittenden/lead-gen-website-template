@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/layout";
-import HomeHero from "../components/index/index.hero";
+import HomeHero from "../components/index/hero";
 
 // markup
 const IndexPage = () => {
