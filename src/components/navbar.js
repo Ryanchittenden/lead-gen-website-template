@@ -15,8 +15,8 @@ const Nav = styled.nav`
     opacity 200ms ease-in;
   ${(props) =>
     props.isVisible
-      ? "max-height: 25vh; visibility: visible; opacity: 1"
-      : "max-height: 0px; visibility: hidden; opacity: 0"};
+      ? "max-height: 25vh; visibility: visible; opacity: 1;"
+      : "max-height: 0px; visibility: hidden; opacity: 0;"};
   ${breakpoints.md} {
     flex-direction: row;
     max-height: 25vh;
