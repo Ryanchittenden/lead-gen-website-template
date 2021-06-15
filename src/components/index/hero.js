@@ -1,26 +1,24 @@
 import React from "react";
 import { css } from "@emotion/react";
-import { centre_content, fontMarginReset } from "../helpers";
 
 const hrStyling = css`
-  border: 2px solid orange;
-  width: 2rem;
-  ${fontMarginReset}
-`;
-
-const innerStyling = css`
+  /* background: url("/2669.jpg") center center/cover no-repeat;*/
+  height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  ${centre_content.md}
+  align-items: center-left;
+  box-shadow: insert 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  object-fit: contain;
+  /* justify-content: center; */
+  padding: 5em;
 `;
 
 export default function HomeHero(props) {
   return (
     <section>
-      <div css={innerStyling}>
+      <div css={hrStyling}>
         <h1>{props.heading ? props.heading : "XYZ Business"}</h1>
-        <hr css={hrStyling} />
         <p>{props.tagline ? props.tagline : "Lorem ipsum"}</p>
       </div>
     </section>
