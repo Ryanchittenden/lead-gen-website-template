@@ -28,6 +28,7 @@ const Nav = styled.nav`
 const NavLink = styled(Link)`
   padding: 1rem;
   display: block;
+  text-decoration: none;
 `;
 
 const menuIcon = css`
@@ -78,8 +79,10 @@ export default function Navbar(props) {
           />
         </div>
         <Nav isVisible={isVisible}>
-          <NavLink to="/"> Home Page</NavLink>
-          <NavLink to="/contact">Contact Page</NavLink>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/enquiry">Enquiry</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
         </Nav>
       </div>
     </header>
